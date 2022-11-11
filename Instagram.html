@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noarchive">
+    <meta name="robots" content="notranslate">
+    <meta name="robots" content="noimageindex">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Instagram Search Tool</title>
+</head>
+<body>
+<main class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Tools</h4>
+                    <hr/>
+                    <p class="card-text text-left">
+                        <i class="fa fa-search"></i><a href="Search.html">Search Engines</a><br>
+                        <i class="fa fa-search"></i><a href="Facebook.html">Facebook</a><br>
+                        <i class="fa fa-search"></i><a href="Twitter.html">Twitter</a><br>
+                        <i class="fa fa-search"></i><a href="Instagram.html">Instagram</a><br>
+                        <i class="fa fa-search"></i><a href="Linkedin.html">LinkedIn</a><br>
+                        <i class="fa fa-search"></i><a href="Communities.html">Communities</a><br>
+                        <i class="fa fa-search"></i><a href="Email.html">Email Addresses</a><br>
+                        <i class="fa fa-search"></i><a href="Username.html">Usernames</a><br>
+                        <i class="fa fa-search"></i><a href="Name.html">Names</a><br>
+                        <i class="fa fa-search"></i><a href="Address.html">Addresses</a><br>
+                        <i class="fa fa-search"></i><a href="Telephone.html">Telephone Numbers</a><br>
+                        <i class="fa fa-search"></i><a href="Location.html">Maps</a><br>
+                        <i class="fa fa-search"></i><a href="Documents.html">Documents</a><br>
+                        <i class="fa fa-search"></i><a href="Pastes.html">Pastes</a><br>
+                        <i class="fa fa-search"></i><a href="Images.html">Images</a><br>
+                        <i class="fa fa-search"></i><a href="Videos.html">Videos</a><br>
+                        <i class="fa fa-search"></i><a href="Domain.html">Domains</a><br>
+                        <i class="fa fa-search"></i><a href="IP.html">IP Addresses</a><br>
+                        <i class="fa fa-search"></i><a href="Business.html">Business/Government</a><br>
+                        <i class="fa fa-search"></i><a href="Vehicle.html">Vehicles</a><br>
+                        <i class="fa fa-search"></i><a href="Currencies.html">Virtual Currencies</a><br>
+                        <i class="fa fa-search"></i><a href="Breaches.html">Breaches</a><br>
+                        <i class="fa fa-search"></i><a href="Radio.html">Live Audio Streams</a><br>
+                        <i class="fa fa-search"></i><a href="Video.html">Live Video Streams</a><br>
+                        <i class="fa fa-search"></i><a href="API.html">APIs</a><br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Instagram Search Tool</h4>
+                    <hr/>
+                    <p class="card-text">
+                        <script type="text/javascript">
+                            function doPopAll(PopAll) {
+                                var pop = document.getElementById("PopAll");
+                                for (j = 1; j <= 100; j++) {
+                                    if (j < 10) {
+                                        j = "0" + j.toString();
+                                    } else {
+                                        j = j.toString();
+                                    }
+                                    console.log(j)
+                                    item = document.getElementById("Search" + j);
+                                    if (item != null) {
+                                        item.value = pop.value;
+                                    }
+                                }
+                            }
+                        </script>
+                    <form onsubmit="doPopAll(this.PopAll.value); return false;">
+                        <input type="text" id="PopAll" name="PopAll" size="30" placeholder="Username"/>
+                        <input type="submit" style="width:140px" value="Populate All"/><br></form>
+                    <br>
+                    <script type="text/javascript">
+                        function doSearch01(Search01) {
+                            window.open('http://instagram.com/' + Search01, 'Search01window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch01(this.Search01.value); return false;">
+                        <input type="text" id="Search01" name="Search01" size="30" placeholder="Username"/>
+                        <input type="submit" style="width:140px" value="IG Profile"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch02(Search02) {
+                            window.open('http://instagram.com/' + Search02 + '/channel/', 'Search02window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch02(this.Search02.value); return false;">
+                        <input type="text" id="Search02" name="Search02" size="30" placeholder="Username" value=""/>
+                        <input type="submit" style="width:140px" value="IG Channel"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch03(Search03) {
+                            window.open('https://instagram.com/' + Search03 + '/tagged/', 'Search03window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch03(this.Search03.value); return false;">
+                        <input type="text" id="Search03" name="Search03" size="30" placeholder="Username" value=""/>
+                        <input type="submit" style="width:140px" value="IG Tagged"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch04(Search04) {
+                            window.open('https://www.google.com/search?q=site%3Ainstagram.com+"' + Search04 + '%22', 'Search04window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch04(this.Search04.value); return false;">
+                        <input type="text" id="Search04" name="Search04" size="30" placeholder="Username" value=""/>
+                        <input type="submit" style="width:140px" value="Outgoing Search"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch05(Search05) {
+                            window.open('https://www.google.com/search?q=site%3Ainstagram.com+"@' + Search05 + '"', 'Search05window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch05(this.Search05.value); return false;">
+                        <input type="text" id="Search05" name="Search05" size="30" placeholder="Username" value=""/>
+                        <input type="submit" style="width:140px" value="Incoming Search"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch06(Search06) {
+                            window.open('https://www.bing.com/search?q=site%3Ainstagram.com+"' + Search06 + '"', 'Search06window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch06(this.Search06.value); return false;">
+                        <input type="text" id="Search06" name="Search06" size="30" placeholder="Username" value=""/>
+                        <input type="submit" style="width:140px" value="Bing Search"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch07(Search07) {
+                            window.open('https://yandex.com/search/?text=site%3Ainstagram.com+"' + Search07 + '"', 'Search07window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch07(this.Search07.value); return false;">
+                        <input type="text" id="Search07" name="Search07" size="30" placeholder="Username" value=""/>
+                        <input type="submit" style="width:140px" value="Yandex Search"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch08(Search08) {
+                            window.open('https://www.google.com/search?q=site%3Atwitter.com+“' + Search08 + '”+“instagram.com%2Fp”', 'Search08window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch08(this.Search08.value); return false;">
+                        <input type="text" id="Search08" name="Search08" size="30" placeholder="Username" value=""/>
+                        <input type="submit" style="width:140px" value="Twitter Posts"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch09(Search09) {
+                            window.open('https://dumpor.com/v/' + Search09, 'Search09window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch09(this.Search09.value); return false;">
+                        <input type="text" id="Search09" name="Search09" size="30" placeholder="Username" value=""/>
+                        <input type="submit" style="width:140px" value="Dumpor Profile"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch10(Search10) {
+                            window.open('https://www.instagram.com/graphql/query/?query_hash=c76146de99bb02f6415203be841dd25a&variables={%22id%22:%22' + Search10 + '%22,%22include_reel%22:true,%22fetch_mutual%22:true,%22first%22:50}', 'Search10window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch10(this.Search10.value); return false;">
+                        <input type="text" id="Search10" name="Search10" size="30" placeholder="IG User ID" value=""/>
+                        <input type="submit" style="width:140px" value="Followers"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch11(Search11) {
+                            window.open('https://www.instagram.com/graphql/query/?query_hash=d04b0a864b4b54837c0d870b0e77e076&variables={%22id%22:%22' + Search11 + '%22,%22include_reel%22:true,%22fetch_mutual%22:false,%22first%22:50}', 'Search11window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch11(this.Search11.value); return false;">
+                        <input type="text" id="Search11" name="Search11" size="30" placeholder="IG User ID" value=""/>
+                        <input type="submit" style="width:140px" value="Following"/><br></form>
+                    <br>
+                    <script type="text/javascript">
+                        function doSearch12(Search12, Search12b) {
+                            window.open('https://www.google.com/search?&q=site%3Ainstagram.com+“' + Search12 + '”+“' + Search12b + '”', 'Search12window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch12(this.Search12.value,this.Search12b.value); return false;">
+                        <input type="text" id="Search12" name="Search12" size="15" placeholder="Username" value=""/>
+                        <input type="text" name="Search12b" size="15" placeholder="Search Terms" value=""/>
+                        <input type="submit" style="width:140px" value="User + Term"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch13(Search13, Search13b) {
+                            window.open('https://www.google.com/search?&q=site%3Ainstagram.com+“' + Search13 + '”+“' + Search13b + '”', 'Search13window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch13(this.Search13.value,this.Search13b.value); return false;">
+                        <input type="text" id="Search13" name="Search13" size="15" placeholder="Username" value=""/>
+                        <input type="text" name="Search13b" size="15" placeholder="Username" value=""/>
+                        <input type="submit" style="width:140px" value="Associations"/><br></form>
+                    <br>
+                    <script type="text/javascript">
+                        function doSearch14(Search14) {
+                            window.open('https://www.instagram.com/explore/tags/' + Search14, 'Search14window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch14(this.Search14.value); return false;">
+                        <input type="text" name="Search14" size="30" placeholder="Search Terms" value=""/>
+                        <input type="submit" style="width:140px" value="IG Hashtags"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch15(Search15) {
+                            window.open('https://www.google.com/search?&q=site%3Ainstagram.com+' + Search15, 'Search15window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch15(this.Search15.value); return false;">
+                        <input type="text" name="Search15" size="30" placeholder="Search Terms" value=""/>
+                        <input type="submit" style="width:140px" value="IG Terms"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch16(Search16) {
+                            window.open('https://dumpor.com/t/' + Search16, 'Search16window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch16(this.Search16.value); return false;">
+                        <input type="text" name="Search16" size="30" placeholder="Hashtag" value=""/>
+                        <input type="submit" style="width:140px" value="Dumpor Tag"/><br></form>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="robots" content="notranslate">
+    <meta name="robots" content="noimageindex">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>API Search Tool</title>
+    <style>
+        iframe {
+            display: block;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<main class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Tools</h4>
+                    <hr/>
+                    <p class="card-text text-left">
+                        <i class="fa fa-search"></i><a href="Search.html">Search Engines</a><br>
+                        <i class="fa fa-search"></i><a href="Facebook.html">Facebook</a><br>
+                        <i class="fa fa-search"></i><a href="Twitter.html">Twitter</a><br>
+                        <i class="fa fa-search"></i><a href="Instagram.html">Instagram</a><br>
+                        <i class="fa fa-search"></i><a href="Linkedin.html">LinkedIn</a><br>
+                        <i class="fa fa-search"></i><a href="Communities.html">Communities</a><br>
+                        <i class="fa fa-search"></i><a href="Email.html">Email Addresses</a><br>
+                        <i class="fa fa-search"></i><a href="Username.html">Usernames</a><br>
+                        <i class="fa fa-search"></i><a href="Name.html">Names</a><br>
+                        <i class="fa fa-search"></i><a href="Address.html">Addresses</a><br>
+                        <i class="fa fa-search"></i><a href="Telephone.html">Telephone Numbers</a><br>
+                        <i class="fa fa-search"></i><a href="Location.html">Maps</a><br>
+                        <i class="fa fa-search"></i><a href="Documents.html">Documents</a><br>
+                        <i class="fa fa-search"></i><a href="Pastes.html">Pastes</a><br>
+                        <i class="fa fa-search"></i><a href="Images.html">Images</a><br>
+                        <i class="fa fa-search"></i><a href="Videos.html">Videos</a><br>
+                        <i class="fa fa-search"></i><a href="Domain.html">Domains</a><br>
+                        <i class="fa fa-search"></i><a href="IP.html">IP Addresses</a><br>
+                        <i class="fa fa-search"></i><a href="Business.html">Business/Government</a><br>
+                        <i class="fa fa-search"></i><a href="Vehicle.html">Vehicles</a><br>
+                        <i class="fa fa-search"></i><a href="Currencies.html">Virtual Currencies</a><br>
+                        <i class="fa fa-search"></i><a href="Breaches.html">Breaches</a><br>
+                        <i class="fa fa-search"></i><a href="Radio.html">Live Audio Streams</a><br>
+                        <i class="fa fa-search"></i><a href="Video.html">Live Video Streams</a><br>
+                        <i class="fa fa-search"></i><a href="API.html">APIs</a><br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">API Search Tool</h4>
+                    <hr/>
+                    <p class="card-text">
+                        Results appear below forms. Refresh page to clear results. Trial links <a href="APILinks.html"
+                                                                                                  target="_blank">HERE</a>.
+                        <script type="text/javascript">
+                            function doapi01(phone, api_key) {
+                                let request = new XMLHttpRequest();
+                                request.open("GET", 'https://api.telnyx.com/v2/number_lookup/+1' + phone + '?type=carrier&type=caller-name', 'inner');
+                                request.setRequestHeader("Authorization", "Bearer " + api_key);
+                                request.send();
+                                request.onload = () => {
+                                    if (request.status == 200) {
+                                        result = JSON.parse(request.response);
+
+                                        html_block = "";
+                                        html_block += "Caller Name:" + result.data.caller_name.caller_name + "<br/>";
+                                        html_block += "Carrier:" + result.data.carrier.name + "<br/>";
+                                        html_block += "Country:" + result.data.country_code + "<br/>";
+                                        inner.document.write(html_block);
+                                    } else {
+                                        inner.document.write("Error!");
+                                    }
+                                }
+                            }
+                        </script>
+                    <form onsubmit="doapi01(this.phone.value,this.api_key.value); return false;">
+                        <input type="text" name="phone" size="9" placeholder="Phone"/>
+                        <input type="text" name="api_key" size="19" placeholder="API Key"/>
+                        <input type="submit" style="width:140px" value="Telnyx"/></form>
+                    <script type="text/javascript">
+                        function doapi02(phone, sid, token) {
+                            let request = new XMLHttpRequest();
+                            request.open("GET", 'https://lookups.twilio.com/v1/PhoneNumbers/' + phone + '?Type=caller-name&Type=carrier', 'inner');
+                            request.setRequestHeader("Authorization", "Basic " + btoa(sid + ":" + token));
+                            request.send();
+                            request.onload = () => {
+                                if (request.status == 200) {
+                                    result = JSON.parse(request.response);
+
+                                    html_block = "";
+                                    html_block += "Caller Name:" + result.caller_name.caller_name + "<br/>";
+                                    html_block += "Carrier:" + result.carrier.name + "<br/>";
+                                    html_block += "Country:" + result.country_code + "<br/>";
+                                    inner.document.write(html_block);
+                                } else {
+                                    inner.document.write("Error!");
+                                }
+                            }
+                        }
+                    </script>
+                    <form onsubmit="doapi02(this.phone.value,this.sid.value,this.token.value); return false;">
+                        <input type="text" name="phone" size="9" placeholder="Phone"/>
+                        <input type="text" name="sid" size="8" placeholder="SID"/>
+                        <input type="text" name="token" size="8" placeholder="API Key"/>
+                        <input type="submit" style="width:140px" value="Twilio"/></form>
+                    <script type="text/javascript">
+                        function doapi03(phone, sid, token) {
+                            window.open('http://api.opencnam.com/v2/phone/+1' + phone + '?account_sid=' + sid + '&auth_token=' + token, 'api03window');
+                        }
+                    </script>
+                    <form onsubmit="doapi03(this.phone.value,this.sid.value,this.token.value); return false;">
+                        <input type="text" name="phone" size="9" placeholder="Phone"/>
+                        <input type="text" name="sid" size="8" placeholder="SID"/>
+                        <input type="text" name="token" size="8" placeholder="API Key"/>
+                        <input type="submit" style="width:140px" value="OpenCNAM"/></form>
+                    <script type="text/javascript">
+                        function doapi04(api, phone) {
+                            window.open('https://cnam.bulkcnam.com/?id=' + api + '&did=' + phone, 'inner');
+                        }
+                    </script>
+                    <form onsubmit="doapi04(this.api.value,this.phone.value); return false;">
+                        <input type="text" name="phone" size="9" placeholder="Phone"/>
+                        <input type="text" name="api" size="19" placeholder="API Key"/>
+                        <input type="submit" style="width:140px" value="BulkCNAM"/></form>
+
+                    <script type="text/javascript">
+                        function doapi06(phone, api) {
+                            window.open('https://dip.cidname.com/' + phone + '/' + api + '&output=raw&reply=none', 'inner');
+                        }
+                    </script>
+                    <form onsubmit="doapi06(this.phone.value,this.api.value); return false;">
+                        <input type="text" name="phone" size="9" placeholder="Phone"/>
+                        <input type="text" name="api" size="19" placeholder="API Key"/>
+                        <input type="submit" style="width:140px" value="CIDName"/></form>
+                    <script type="text/javascript">
+                        function doapi07(phone, api) {
+                            window.open('http://trial.serviceobjects.com/gppl2/api.svc/GetPhoneInfo?PhoneNumber=' + phone + '&TestType=full&LicenseKey=' + api, 'inner');
+                        }
+                    </script>
+                    <form onsubmit="doapi07(this.phone.value,this.api.value); return false;">
+                        <input type="text" name="phone" size="9" placeholder="Phone"/>
+                        <input type="text" name="api" size="19" placeholder="API Key"/>
+                        <input type="submit" style="width:140px" value="ServiceObjects"/></form>
+                    <script type="text/javascript">
+                        function doapi08(phone, api) {
+                            window.open('https://api.peopledatalabs.com/v5/person/enrich?pretty=true&api_key=' + api + '&phone=+1' + phone, 'inner');
+                        }
+                    </script>
+                    <form onsubmit="doapi08(this.phone.value,this.api.value); return false;">
+                        <input type="text" name="phone" size="9" placeholder="Phone"/>
+                        <input type="text" name="api" size="19" placeholder="API Key"/>
+                        <input type="submit" style="width:140px" value="PDL Phone"/></form>
+                    <script type="text/javascript">
+                        function doapi09(email, api) {
+                            window.open('https://api.peopledatalabs.com/v5/person/enrich?pretty=true&api_key=' + api + '&email=' + email, 'inner');
+                        }
+                    </script>
+                    <form onsubmit="doapi09(this.email.value,this.api.value); return false;">
+                        <input type="text" name="email" size="9" placeholder="Email"/>
+                        <input type="text" name="api" size="19" placeholder="API Key"/>
+                        <input type="submit" style="width:140px" value="PDL Email"/></form>
+                    <script type="text/javascript">
+                        function doapi10(username, api) {
+                            window.open('https://api.peopledatalabs.com/v5/person/enrich?pretty=true&api_key=' + api + '&profile=www.facebook.com/' + username, 'inner');
+                        }
+                    </script>
+                    <form onsubmit="doapi10(this.username.value,this.api.value); return false;">
+                        <input type="text" name="username" size="9" placeholder="Username"/>
+                        <input type="text" name="api" size="19" placeholder="API Key"/>
+                        <input type="submit" style="width:140px" value="PDL Facebook"/></form>
+                    <script type="text/javascript">
+                        function doapi11(username, api) {
+                            window.open('https://api.peopledatalabs.com/v5/person/enrich?pretty=true&api_key=' + api + '&profile=www.twitter.com/' + username, 'inner');
+                        }
+                    </script>
+                    <form onsubmit="doapi11(this.username.value,this.api.value); return false;">
+                        <input type="text" name="username" size="9" placeholder="Username"/>
+                        <input type="text" name="api" size="19" placeholder="API Key"/>
+                        <input type="submit" style="width:140px" value="PDL Twitter"/></form>
+                    <script type="text/javascript">
+                        function doapi12(username, api) {
+                            window.open('https://api.peopledatalabs.com/v5/person/enrich?pretty=true&api_key=' + api + '&profile=www.linkedin.com/in/' + username, 'inner');
+                        }
+                    </script>
+                    <form onsubmit="doapi12(this.username.value,this.api.value); return false;">
+                        <input type="text" name="username" size="9" placeholder="Username"/>
+                        <input type="text" name="api" size="19" placeholder="API Key"/>
+                        <input type="submit" style="width:140px" value="PDL LinkedIn"/></form>
+                    <script type="text/javascript">
+                        function doapi13(email, token) {
+                            let request = new XMLHttpRequest();
+                            request.open("GET", 'https://breachdirectory.p.rapidapi.com/?func=auto&term=' + email);
+                            request.setRequestHeader("X-RapidAPI-Key", token)
+                            request.setRequestHeader("X-RapidAPI-Host", "breachdirectory.p.rapidapi.com")
+                            request.send();
+                            request.onload = () => {
+                                if (request.status == 200) {
+                                    result = JSON.parse(request.response);
+
+                                    inner.document.write("<pre>" + JSON.stringify(result, null, 2) + "</pre>");
+                                } else {
+                                    inner.document.write("Error!");
+                                }
+                            }
+                        }
+                    </script>
+                    <form onsubmit="doapi13(this.email.value,this.token.value); return false;">
+                        <input type="text" name="email" size="9" placeholder="Email"/>
+                        <input type="text" name="token" size="19" placeholder="API Key"/>
+                        <input type="submit" style="width:140px" value="Breach Directory"/></form>
+                    <script type="text/javascript">
+                        function doapi14(username, token) {
+                            let request = new XMLHttpRequest();
+                            request.open("GET", 'https://breachdirectory.p.rapidapi.com/?func=auto&term=' + username);
+                            request.setRequestHeader("X-RapidAPI-Key", token)
+                            request.setRequestHeader("X-RapidAPI-Host", "breachdirectory.p.rapidapi.com")
+                            request.send();
+                            request.onload = () => {
+                                if (request.status == 200) {
+                                    result = JSON.parse(request.response);
+
+                                    inner.document.write("<pre>" + JSON.stringify(result, null, 2) + "</pre>");
+                                } else {
+                                    inner.document.write("Error!");
+                                }
+                            }
+                        }
+                    </script>
+                    <form onsubmit="doapi14(this.username.value,this.token.value); return false;">
+                        <input type="text" name="username" size="9" placeholder="Username"/>
+                        <input type="text" name="token" size="19" placeholder="API Key"/>
+                        <input type="submit" style="width:140px" value="Breach Directory"/></form>
+                    <script type="text/javascript">
+                        function doapi15(password, token) {
+                            let request = new XMLHttpRequest();
+                            request.open("GET", 'https://breachdirectory.p.rapidapi.com/?func=password&term=' + password);
+                            request.setRequestHeader("X-RapidAPI-Key", token)
+                            request.setRequestHeader("X-RapidAPI-Host", "breachdirectory.p.rapidapi.com")
+                            request.send();
+                            request.onload = () => {
+                                if (request.status == 200) {
+                                    result = JSON.parse(request.response);
+
+                                    inner.document.write("<pre>" + JSON.stringify(result, null, 2) + "</pre>");
+                                } else {
+                                    inner.document.write("Error!");
+                                }
+                            }
+                        }
+                    </script>
+                    <form onsubmit="doapi15(this.password.value,this.token.value); return false;">
+                        <input type="text" name="password" size="9" placeholder="Password"/>
+                        <input type="text" name="token" size="19" placeholder="API Key"/>
+                        <input type="submit" style="width:140px" value="Breach Directory"/></form>
+                    <script type="text/javascript">
+                        function doapi16(domain, token) {
+                            let request = new XMLHttpRequest();
+                            request.open("GET", 'https://breachdirectory.p.rapidapi.com/?func=domain&term=' + domain);
+                            request.setRequestHeader("X-RapidAPI-Key", token)
+                            request.setRequestHeader("X-RapidAPI-Host", "breachdirectory.p.rapidapi.com")
+                            request.send();
+                            request.onload = () => {
+                                if (request.status == 200) {
+                                    result = JSON.parse(request.response);
+
+                                    inner.document.write("<pre>" + JSON.stringify(result, null, 2) + "</pre>");
+                                } else {
+                                    inner.document.write("Error!");
+                                }
+                            }
+                        }
+                    </script>
+                    <form onsubmit="doapi16(this.domain.value,this.token.value); return false;">
+                        <input type="text" name="domain" size="9" placeholder="Domain"/>
+                        <input type="text" name="token" size="19" placeholder="API Key"/>
+                        <input type="submit" style="width:140px" value="Breach Directory"/></form>
+                    <script type="text/javascript">
+                        function doapi17(hash, token) {
+                            let request = new XMLHttpRequest();
+                            request.open("GET", 'https://breachdirectory.p.rapidapi.com/?func=dehash&term=' + hash);
+                            request.setRequestHeader("X-RapidAPI-Key", token)
+                            request.setRequestHeader("X-RapidAPI-Host", "breachdirectory.p.rapidapi.com")
+                            request.send();
+                            request.onload = () => {
+                                if (request.status == 200) {
+                                    result = JSON.parse(request.response);
+
+                                    inner.document.write("<pre>" + JSON.stringify(result, null, 2) + "</pre>");
+                                } else {
+                                    inner.document.write("Error!");
+                                }
+                            }
+                        }
+                    </script>
+                    <form onsubmit="doapi17(this.hash.value,this.token.value); return false;">
+                        <input type="text" name="hash" size="9" placeholder="Hash"/>
+                        <input type="text" name="token" size="19" placeholder="API Key"/>
+                        <input type="submit" style="width:140px" value="Breach Directory"/></form>
+                    <script type="text/javascript">
+                        function doapi18(domain, api) {
+                            window.open('https://whois-history.whoisxmlapi.com/api/v1?apiKey=' + api + '&domainName=' + domain + '&mode=purchase', 'whoiswindow');
+                        }
+                    </script>
+                    <form onsubmit="doapi18(this.phone.value,this.api.value); return false;">
+                        <input type="text" name="phone" size="9" placeholder="Domain"/>
+                        <input type="text" name="api" size="19" placeholder="API Key"/>
+                        <input type="submit" style="width:140px" value="WhoisXML"/></form>
+                    <script type="text/javascript">
+                        function doapi19(domain, api) {
+                            window.open('https://api.whoxy.com/?key=' + api + '&history=' + domain, 'whois2window');
+                        }
+                    </script>
+                    <form onsubmit="doapi19(this.phone.value,this.api.value); return false;">
+                        <input type="text" name="phone" size="9" placeholder="Domain"/>
+                        <input type="text" name="api" size="19" placeholder="API Key"/>
+                        <input type="submit" style="width:140px" value="Whoxy"/></form>
+                    <iframe name="inner" class="inner" frameborder=0 height="700px" scrolling="auto"></iframe>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>

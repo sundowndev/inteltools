@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noarchive">
+    <meta name="robots" content="notranslate">
+    <meta name="robots" content="noimageindex">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Email Search Tool</title>
+</head>
+<body>
+<main class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Tools</h4>
+                    <hr/>
+                    <p class="card-text text-left">
+                        <i class="fa fa-search"></i><a href="Search.html">Search Engines</a><br>
+                        <i class="fa fa-search"></i><a href="Facebook.html">Facebook</a><br>
+                        <i class="fa fa-search"></i><a href="Twitter.html">Twitter</a><br>
+                        <i class="fa fa-search"></i><a href="Instagram.html">Instagram</a><br>
+                        <i class="fa fa-search"></i><a href="Linkedin.html">LinkedIn</a><br>
+                        <i class="fa fa-search"></i><a href="Communities.html">Communities</a><br>
+                        <i class="fa fa-search"></i><a href="Email.html">Email Addresses</a><br>
+                        <i class="fa fa-search"></i><a href="Username.html">Usernames</a><br>
+                        <i class="fa fa-search"></i><a href="Name.html">Names</a><br>
+                        <i class="fa fa-search"></i><a href="Address.html">Addresses</a><br>
+                        <i class="fa fa-search"></i><a href="Telephone.html">Telephone Numbers</a><br>
+                        <i class="fa fa-search"></i><a href="Location.html">Maps</a><br>
+                        <i class="fa fa-search"></i><a href="Documents.html">Documents</a><br>
+                        <i class="fa fa-search"></i><a href="Pastes.html">Pastes</a><br>
+                        <i class="fa fa-search"></i><a href="Images.html">Images</a><br>
+                        <i class="fa fa-search"></i><a href="Videos.html">Videos</a><br>
+                        <i class="fa fa-search"></i><a href="Domain.html">Domains</a><br>
+                        <i class="fa fa-search"></i><a href="IP.html">IP Addresses</a><br>
+                        <i class="fa fa-search"></i><a href="Business.html">Business/Government</a><br>
+                        <i class="fa fa-search"></i><a href="Vehicle.html">Vehicles</a><br>
+                        <i class="fa fa-search"></i><a href="Currencies.html">Virtual Currencies</a><br>
+                        <i class="fa fa-search"></i><a href="Breaches.html">Breaches</a><br>
+                        <i class="fa fa-search"></i><a href="Radio.html">Live Audio Streams</a><br>
+                        <i class="fa fa-search"></i><a href="Video.html">Live Video Streams</a><br>
+                        <i class="fa fa-search"></i><a href="API.html">APIs</a><br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Email Search Tool</h4>
+                    <hr/>
+                    <p class="card-text">
+                        <script type="text/javascript">
+                            function doPopAll(PopAll) {
+                                var pop = document.getElementById("PopAll");
+                                for (j = 1; j <= 100; j++) {
+                                    if (j < 10) {
+                                        j = "0" + j.toString();
+                                    } else {
+                                        j = j.toString();
+                                    }
+                                    console.log(j)
+                                    item = document.getElementById("Search" + j);
+                                    if (item != null) {
+                                        item.value = pop.value;
+                                    }
+                                }
+                            }
+                        </script>
+                    <form onsubmit="doPopAll(this.PopAll.value); return false;">
+                        <input type="text" id="PopAll" name="PopAll" size="30" placeholder="Email Address"/>
+                        <input type="submit" style="width:140px" value="Populate All"/><br></form>
+                    <br>
+                    <script type="text/javascript">
+                        function doSearch01(Search01) {
+                            window.open('http://google.com/search?q="' + Search01 + '"', 'Search01window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch01(this.Search01.value); return false;">
+                        <input type="text" id="Search01" name="Search01" size="30" placeholder="Email Address"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="Google"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch02(Search02) {
+                            window.open('http://bing.com/search?q="' + Search02 + '"', 'Search02window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch02(this.Search02.value); return false;">
+                        <input type="text" id="Search02" name="Search02" size="30" placeholder="Email Address"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="Bing"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch03(Search03) {
+                            window.open('https://yandex.com/search/?text="' + Search03 + '"', 'Search03window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch03(this.Search03.value); return false;">
+                        <input type="text" id="Search03" name="Search03" size="30" placeholder="Email Address"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="Yandex"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch04(Search04) {
+                            window.open('https://emailrep.io/query/' + Search04, 'Search04window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch04(this.Search04.value); return false;">
+                        <input type="text" id="Search04" name="Search04" size="30" placeholder="Email Address"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="Emailrep"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch05(Search05) {
+                            window.open('https://en.gravatar.com/site/check/' + Search05, 'Search05window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch05(this.Search05.value); return false;">
+                        <input type="text" id="Search05" name="Search05" size="30" placeholder="Email Address"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="Gravatar"/><br></form>
+                    <br>
+                    <script type="text/javascript">
+                        function doSearch06(Search06) {
+                            window.open('https://haveibeenpwned.com/unifiedsearch/' + Search06, 'Search06window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch06(this.Search06.value); return false;">
+                        <input type="text" id="Search06" name="Search06" size="30" placeholder="Email Address"/>
+                        <input type="submit" style="width:140px" value="HIBP"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch07(Search07) {
+                            window.open('https://dehashed.com/search?query="' + Search07 + '"', 'Search07window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch07(this.Search07.value); return false;">
+                        <input type="text" id="Search07" name="Search07" size="30" placeholder="Email Address"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="Dehashed"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch08(Search08) {
+                            window.open('https://portal.spycloud.com/endpoint/enriched-stats/' + Search08, 'Search08window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch08(this.Search08.value); return false;">
+                        <input type="text" id="Search08" name="Search08" size="30" placeholder="Email Address"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="Spycloud"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch09(Search09) {
+                            window.open('https://cavalier.hudsonrock.com/api/json/v2/preview/search-by-login/osint-tools?email=' + Search09, 'Search09window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch09(this.Search09.value); return false;">
+                        <input type="text" id="Search09" name="Search09" size="30" placeholder="Email Address"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="HudsonRock"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch10(Search10) {
+                            window.open('https://check.cybernews.com/chk/?lang=en_US&e=' + Search10, 'Search10window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch10(this.Search10.value); return false;">
+                        <input type="text" id="Search10" name="Search10" size="30" placeholder="Email Address"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="Cybernews"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch11(Search11) {
+                            window.open('https://psbdmp.ws/api/search/' + Search11, 'Search11window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch11(this.Search11.value); return false;">
+                        <input type="text" id="Search11" name="Search11" size="30" placeholder="Email Address"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="PSBDMP"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch12(Search12) {
+                            window.open('https://intelx.io/?s=' + Search12, 'Search12window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch12(this.Search12.value); return false;">
+                        <input type="text" id="Search12" name="Search12" size="30" placeholder="Email Address"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="IntelX"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch27(Search27) {
+                            window.open('https://cleantalk.org/email-checker/' + Search27, 'Search27window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch27(this.Search27.value); return false;">
+                        <input type="text" id="Search27" name="Search27" size="30" placeholder="Email Address"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="CleanTalk"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch28(Search28) {
+                            window.open('https://spamdb.org/blacklists?q=' + Search28, 'Search28window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch28(this.Search28.value); return false;">
+                        <input type="text" id="Search28" name="Search28" size="30" placeholder="Email Address"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="SpamDB"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch29(Search29) {
+                            window.open('https://leakix.net/search?scope=leak&q=%22' + Search29 + '%22', 'Search29window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch29(this.Search29.value); return false;">
+                        <input type="text" id="Search29" name="Search29" size="30" placeholder="Email Address"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="LeakIX"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch13(Search13) {
+                            var f = document.getElementById('leakedSourceEmailForm');
+                            f.search.value = Search13;
+                            window.open('', 'Search13window');
+                            f.submit();
+                        }
+                    </script>
+                    <form onsubmit="doSearch13(this.Search13.value); return false;">
+                        <input type="text" id="Search13" name="Search13" size="30" placeholder="Email Address"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="LeakedSource"/></form>
+                    <form id="leakedSourceEmailForm" method="post" action="https://leakedsource.ru/"
+                          target="Search13window">
+                        <input type="hidden" id="search" name="search" value="">
+                        <input type="hidden" name="searchType" value="email">
+                        <input type="hidden" name="wildcard" value="0">
+                        <input type="submit" id="searchsubmit" style="visibility: hidden;" value="Search"></form>
+                    <script type="text/javascript">
+                        function doSearch14(Search14) {
+                            window.open('https://hunter.io/email-verifier/' + Search14, 'Search14window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch14(this.Search14.value); return false;">
+                        <input type="text" id="Search14" name="Search14" size="30" placeholder="Email Address"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="HunterVerify"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch15(Search15) {
+                            window.open('https://data.occrp.org/search?q=' + Search15, 'Search15window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch15(this.Search15.value); return false;">
+                        <input type="text" id="Search15" name="Search15" size="30" placeholder="Email Address"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="OCCRP"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch16(Search16) {
+                            window.open('https://www.spytox.com/people/search?email=' + Search16, 'Search16window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch16(this.Search16.value); return false;">
+                        <input type="text" id="Search16" name="Search16" size="30" placeholder="Email Address"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="SpyTox"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch17(Search17) {
+                            window.open('https://thatsthem.com/email/' + Search17, 'Search17window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch17(this.Search17.value); return false;">
+                        <input type="text" id="Search17" name="Search17" size="30" placeholder="Email Address"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="ThatsThem"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch18(Search18) {
+                            window.open('https://api.protonmail.ch/pks/lookup?op=get&search=' + Search18, 'Search18window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch18(this.Search18.value); return false;">
+                        <input type="text" id="Search18" name="Search18" size="30" placeholder="Email Address"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="Protonmail"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch19(Search19) {
+                            window.open('http://domainbigdata.com/email/' + Search19, 'Search19window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch19(this.Search19.value); return false;">
+                        <input type="text" id="Search19" name="Search19" size="30" placeholder="Email Address"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="DomainData"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch20(Search20) {
+                            window.open('https://whoisology.com/email/' + Search20, 'Search20window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch20(this.Search20.value); return false;">
+                        <input type="text" id="Search20" name="Search20" size="30" placeholder="Email Address"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="Whoisology"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch21(Search21) {
+                            window.open('http://analyzeid.com/?email=' + Search21, 'Search21window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch21(this.Search21.value); return false;">
+                        <input type="text" id="Search21" name="Search21" size="30" placeholder="Email Address"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="AnalyzeID"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch22(Search22) {
+                            window.open('https://www.whoxy.com/search.php?email=' + Search22, 'Search22window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch22(this.Search22.value); return false;">
+                        <input type="text" id="Search22" name="Search22" size="30" placeholder="Email Address"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="Whoxy"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch23(Search23) {
+                            window.open('https://scamsearch.io/search_report?searchoption=all&search=' + Search23, 'Search23window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch23(this.Search23.value); return false;">
+                        <input type="text" id="Search23" name="Search23" size="30" placeholder="Email Address"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="ScamSearch"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch24(Search24) {
+                            window.open('https://myspace.com/search/people?q=' + Search24, 'Search24window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch24(this.Search24.value); return false;">
+                        <input type="text" id="Search24" name="Search24" size="30" placeholder="Email Address"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="MySpace"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch25(Search25) {
+                            window.open('https://www.flickr.com/search/people/?q=' + Search25, 'Search25window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch25(this.Search25.value); return false;">
+                        <input type="text" id="Search25" name="Search25" size="30" placeholder="Email Address"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="Flickr"/><br></form>
+                    <br>
+                    <script type="text/javascript">
+                        function doall(all) {
+                            window.open('http://google.com/search?q="' + all + '"', 'Search01window');
+                            window.open('http://bing.com/search?q="' + all + '"', 'Search02window');
+                            window.open('https://yandex.com/search/?text="' + all + '"', 'Search03window');
+                            window.open('https://emailrep.io/query/' + all, 'Search04window');
+                            window.open('https://en.gravatar.com/site/check/' + all, 'Search05window');
+                            window.open('https://haveibeenpwned.com/unifiedsearch/' + all, 'Search06window');
+                            window.open('https://dehashed.com/search?query="' + all + '"', 'Search07window');
+                            window.open('https://portal.spycloud.com/endpoint/enriched-stats/' + all, 'Search08window');
+                            window.open('https://psbdmp.ws/api/search/' + all, 'Search09window');
+                            window.open('https://cavalier.hudsonrock.com/api/json/v2/preview/search-by-login/osint-tools?email=' + all, 'Search10window');
+                            window.open('https://check.cybernews.com/chk/?lang=en_US&e=' + all, 'Search11window');
+                            window.open('http://google.com/search?q=site:psbdmp.ws+"' + all + '"', 'Search12window');
+                            window.open('https://intelx.io/?s=' + all, 'Search13window');
+                            window.open('https://hunter.io/email-verifier/' + all, 'Search14window');
+                            window.open('https://data.occrp.org/search?q=' + all, 'Search15window');
+                            window.open('https://www.spytox.com/people/search?email=' + all, 'Search16window');
+                            window.open('https://thatsthem.com/email/' + all, 'Search17window');
+                            window.open('http://domainbigdata.com/email/' + all, 'Search18window');
+                            window.open('https://api.protonmail.ch/pks/lookup?op=get&search=' + all, 'Search19awindow');
+                            window.open('https://whoisology.com/email/' + all, 'Search21window');
+                            window.open('http://analyzeid.com/?email=' + all, 'Search22window');
+                            window.open('https://www.whoxy.com/search.php?email=' + all, 'Search23window');
+                            window.open('https://scamsearch.io/search_report?searchoption=all&search=' + all, 'Search24window');
+                            window.open('https://myspace.com/search/people?q=' + all, 'Search25window');
+                            window.open('https://www.flickr.com/search/people/?q=' + all, 'Search26window');
+                            window.open('https://cleantalk.org/email-checker/' + all, 'Search27window');
+                            window.open('https://spamdb.org/blacklists?q=' + all, 'Search28window');
+                            window.open('https://leakix.net/search?scope=leak&q=%22' + all + '%22', 'Search29window');
+                        }
+                    </script>
+                    <form onsubmit="doall(this.all.value); return false;">
+                        <input type="text" id="Search99" name="all" size="30" placeholder="Email Address" value=""/>
+                        <input type="submit" style="width:140px" value="Submit All"/>
+                    </form>
+                    <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>

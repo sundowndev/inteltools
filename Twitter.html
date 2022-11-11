@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noarchive">
+    <meta name="robots" content="notranslate">
+    <meta name="robots" content="noimageindex">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Twitter Search Tool</title>
+</head>
+<body>
+<main class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Tools</h4>
+                    <hr/>
+                    <p class="card-text text-left">
+                        <i class="fa fa-search"></i><a href="Search.html">Search Engines</a><br>
+                        <i class="fa fa-search"></i><a href="Facebook.html">Facebook</a><br>
+                        <i class="fa fa-search"></i><a href="Twitter.html">Twitter</a><br>
+                        <i class="fa fa-search"></i><a href="Instagram.html">Instagram</a><br>
+                        <i class="fa fa-search"></i><a href="Linkedin.html">LinkedIn</a><br>
+                        <i class="fa fa-search"></i><a href="Communities.html">Communities</a><br>
+                        <i class="fa fa-search"></i><a href="Email.html">Email Addresses</a><br>
+                        <i class="fa fa-search"></i><a href="Username.html">Usernames</a><br>
+                        <i class="fa fa-search"></i><a href="Name.html">Names</a><br>
+                        <i class="fa fa-search"></i><a href="Address.html">Addresses</a><br>
+                        <i class="fa fa-search"></i><a href="Telephone.html">Telephone Numbers</a><br>
+                        <i class="fa fa-search"></i><a href="Location.html">Maps</a><br>
+                        <i class="fa fa-search"></i><a href="Documents.html">Documents</a><br>
+                        <i class="fa fa-search"></i><a href="Pastes.html">Pastes</a><br>
+                        <i class="fa fa-search"></i><a href="Images.html">Images</a><br>
+                        <i class="fa fa-search"></i><a href="Videos.html">Videos</a><br>
+                        <i class="fa fa-search"></i><a href="Domain.html">Domains</a><br>
+                        <i class="fa fa-search"></i><a href="IP.html">IP Addresses</a><br>
+                        <i class="fa fa-search"></i><a href="Business.html">Business/Government</a><br>
+                        <i class="fa fa-search"></i><a href="Vehicle.html">Vehicles</a><br>
+                        <i class="fa fa-search"></i><a href="Currencies.html">Virtual Currencies</a><br>
+                        <i class="fa fa-search"></i><a href="Breaches.html">Breaches</a><br>
+                        <i class="fa fa-search"></i><a href="Radio.html">Live Audio Streams</a><br>
+                        <i class="fa fa-search"></i><a href="Video.html">Live Video Streams</a><br>
+                        <i class="fa fa-search"></i><a href="API.html">APIs</a><br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Twitter Search Tool</h4>
+                    <hr/>
+                    <p class="card-text">
+                        <script type="text/javascript">
+                            function doPopAll(PopAll) {
+                                var pop = document.getElementById("PopAll");
+                                for (j = 1; j <= 100; j++) {
+                                    if (j < 10) {
+                                        j = "0" + j.toString();
+                                    } else {
+                                        j = j.toString();
+                                    }
+                                    console.log(j)
+                                    item = document.getElementById("Search" + j);
+                                    if (item != null) {
+                                        item.value = pop.value;
+                                    }
+                                }
+                            }
+                        </script>
+                    <form onsubmit="doPopAll(this.PopAll.value); return false;">
+                        <input type="text" id="PopAll" name="PopAll" size="30" placeholder="Twitter Username"/>
+                        <input type="submit" style="width:140px" value="Populate All"/><br></form>
+                    <br>
+                    <script type="text/javascript">
+                        function doSearch01(Search01) {
+                            window.open('https://twitter.com/' + Search01, 'Search01window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch01(this.Search01.value); return false;">
+                        <input type="text" id="Search01" name="Search01" size="30" placeholder="Twitter Username"/>
+                        <input type="submit" style="width:140px" value="Twitter Profile"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch02(Search02) {
+                            window.open('https://twitter.com/search?q=from%3A' + Search02 + '&f=live', 'Search02window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch02(this.Search02.value); return false;">
+                        <input type="text" id="Search02" name="Search02" size="30" placeholder="Twitter Username"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="Outgoing Tweets"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch03(Search03) {
+                            window.open('https://twitter.com/search?q=to%3A' + Search03 + '&f=live', 'Search03window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch03(this.Search03.value); return false;">
+                        <input type="text" id="Search03" name="Search03" size="30" placeholder="Twitter Username"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="Incoming Tweets"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch04(Search04) {
+                            window.open('https://twitter.com/' + Search04 + '/media/', 'Search04window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch04(this.Search04.value); return false;">
+                        <input type="text" id="Search04" name="Search04" size="30" placeholder="Twitter Username"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="Media Tweets"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch05(Search05) {
+                            window.open('https://twitter.com/' + Search05 + '/likes/', 'Search05window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch05(this.Search05.value); return false;">
+                        <input type="text" id="Search05" name="Search05" size="30" placeholder="Twitter Username"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="Liked Tweets"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch06(Search06) {
+                            window.open('https://twitter.com/' + Search06 + '/lists/', 'Search06window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch06(this.Search06.value); return false;">
+                        <input type="text" id="Search06" name="Search06" size="30" placeholder="Twitter Username"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="Lists Created"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch07(Search07) {
+                            window.open('https://twitter.com/' + Search07 + '/lists/memberships', 'Search07window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch07(this.Search07.value); return false;">
+                        <input type="text" id="Search07" name="Search07" size="30" placeholder="Twitter Username"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="Lists Included"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch08(Search08) {
+                            window.open('https://twitter.com/' + Search08 + '/moments', 'Search08window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch08(this.Search08.value); return false;">
+                        <input type="text" id="Search08" name="Search08" size="30" placeholder="Twitter Username"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="Moments"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch09(Search09) {
+                            window.open('https://twitter.com/' + Search09 + '/topics', 'Search09window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch09(this.Search09.value); return false;">
+                        <input type="text" id="Search09" name="Search09" size="30" placeholder="Twitter Username"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="Topics"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch10(Search10) {
+                            window.open('https://twitter.com/' + Search10 + '/followers', 'Search10window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch10(this.Search10.value); return false;">
+                        <input type="text" id="Search10" name="Search10" size="30" placeholder="Twitter Username"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="Followers"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch11(Search11) {
+                            window.open('https://twitter.com/' + Search11 + '/following', 'Search11window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch11(this.Search11.value); return false;">
+                        <input type="text" id="Search11" name="Search11" size="30" placeholder="Twitter Username"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="Following"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch12(Search12a, Search12b) {
+                            window.open('https://twitter.com/search?q=from%3A' + Search12a + '%20since%3A' + Search12b + '-01-01%20until%3A' + Search12b + '-12-31&src=typd&f=live', 'Search12window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch12(this.Search12a.value,this.Search12b.value); return false;">
+                        <input type="text" id="Search12" name="Search12a" size="21" placeholder="Twitter Username"
+                               value=""/>
+                        <input type="text" id="Search12" name="Search12b" size="6" placeholder="Year" value=""/>
+                        <input type="submit" style="width:140px" value="Outgoing by Year"/><br>
+                    </form>
+                    <script type="text/javascript">
+                        function doSearch13(Search13a, Search13b) {
+                            window.open('https://twitter.com/search?q=to%3A' + Search13a + '%20since%3A' + Search13b + '-01-01%20until%3A' + Search13b + '-12-31&src=typd&f=live', 'Search13window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch13(this.Search13a.value,this.Search13b.value); return false;">
+                        <input type="text" id="Search13" name="Search13a" size="21" placeholder="Twitter Username"
+                               value=""/>
+                        <input type="text" id="Search13" name="Search13b" size="6" placeholder="Year" value=""/>
+                        <input type="submit" style="width:140px" value="Incoming by Year"/><br>
+                    </form>
+                    <script type="text/javascript">
+                        function doSearch14(Search14a, Search14b) {
+                            window.open('https://twitter.com/search?q=from%3A' + Search14a + '%20since%3A' + Search14b + '-01-01%20until%3A' + Search14b + '-12-31 filter%3Amedia&src=typd&f=live', 'Search14window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch14(this.Search14a.value,this.Search14b.value); return false;">
+                        <input type="text" id="Search14" name="Search14a" size="21" placeholder="Twitter Username"
+                               value=""/>
+                        <input type="text" id="Search14" name="Search14b" size="6" placeholder="Year" value=""/>
+                        <input type="submit" style="width:140px" value="Media by Year"/><br>
+                    </form>
+                    <script type="text/javascript">
+                        function doSearch15(Search15a, Search15b) {
+                            window.open('https://twitter.com/search?q=' + Search15a + '%20since%3A' + Search15b + '-01-01%20until%3A' + Search15b + '-12-31&src=typd&f=live', 'Search15window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch15(this.Search15a.value,this.Search15b.value); return false;">
+                        <input type="text" id="Search15" name="Search15a" size="21" placeholder="Search Term" value=""/>
+                        <input type="text" id="Search15" name="Search15b" size="6" placeholder="Year" value=""/>
+                        <input type="submit" style="width:140px" value="Term by Year"/><br>
+                    </form>
+                    <script type="text/javascript">
+                        function doSearch16(Search16a, Search16b) {
+                            window.open('https://twitter.com/search?q=from%3A' + Search16a + '%20since%3A' + Search16b + '-01-01%20until%3A' + Search16b + '-12-31 -filter%3Areplies&src=typd&f=live', 'Search16window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch16(this.Search16a.value,this.Search16b.value); return false;">
+                        <input type="text" id="Search16" name="Search16a" size="21" placeholder="Twitter Username"
+                               value=""/>
+                        <input type="text" id="Search16" name="Search16b" size="6" placeholder="Year" value=""/>
+                        <input type="submit" style="width:140px" value="No Replies"/><br>
+                    </form>
+                    <script type="text/javascript">
+                        function doSearch17(Search17a, Search17b) {
+                            window.open('https://twitter.com/search?q=from%3A' + Search17a + '%20since%3A' + Search17b + '-01-01%20until%3A' + Search17b + '-12-31 filter%3Areplies&src=typd&f=live', 'Search17window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch17(this.Search17a.value,this.Search17b.value); return false;">
+                        <input type="text" id="Search17" name="Search17a" size="21" placeholder="Twitter Username"
+                               value=""/>
+                        <input type="text" id="Search17" name="Search17b" size="6" placeholder="Year" value=""/>
+                        <input type="submit" style="width:140px" value="Only Replies"/><br>
+                    </form>
+                    <form method="POST" target="_blank" id="form" action="https://tweetbeaver.com/getid.php">
+                        <input name="jpn" type="text" id="Search90" size="30" placeholder="Twitter Username" required>
+                        <input type="submit" style="width:140px" value="TB User ID"/><br/>
+                    </form>
+                    <form method="POST" target="_blank" id="form" action="https://tweetbeaver.com/getscreenname.php">
+                        <input name="jpn" type="text" id="Search91" size="30" placeholder="Twitter Number" required>
+                        <input type="submit" style="width:140px" value="TB Username"/><br/>
+                    </form>
+                    <form method="POST" target="_blank" id="form" action="https://tweetbeaver.com/getdata.php">
+                        <input name="jpn" type="text" id="Search92" size="30" placeholder="Twitter Username" required>
+                        <input type="submit" style="width:140px" value="TB User Data"/><br/>
+                    </form>
+                    <form method="POST" target="_blank" id="form" action="https://tweetbeaver.com/getfollowers.php">
+                        <input name="jpn" type="text" id="Search93" size="30" placeholder="Twitter Username" required>
+                        <input type="submit" style="width:140px" value="TB Followers"/><br/>
+                    </form>
+                    <form method="POST" target="_blank" id="form" action="https://tweetbeaver.com/getfriends.php">
+                        <input name="jpn" type="text" id="Search94" size="30" placeholder="Twitter Username" required>
+                        <input type="submit" style="width:140px" value="TB Friends"/><br/>
+                    </form>
+                    <form method="POST" target="_blank" id="form" action="https://tweetbeaver.com/gettweets.php">
+                        <input name="jpn" type="text" id="Search95" size="30" placeholder="Twitter Username" required>
+                        <input type="submit" style="width:140px" value="TB Tweets"/><br/>
+                    </form>
+                    <form method="POST" target="_blank" id="form" action="https://tweetbeaver.com/getfavorites.php">
+                        <input name="jpn" type="text" id="Search96" size="30" placeholder="Twitter Username" required>
+                        <input type="submit" style="width:140px" value="TB Likes"/><br/>
+                    </form>
+                    <script type="text/javascript">
+                        function doSearch18(Search18) {
+                            window.open('https://socialbearing.com/search/user/' + Search18, 'Search18window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch18(this.Search18.value); return false;">
+                        <input type="text" id="Search18" name="Search18" size="30" placeholder="Twitter Username"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="SocialBearing"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch19(Search19) {
+                            window.open('https://foller.me/' + Search19, 'Search19window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch19(this.Search19.value); return false;">
+                        <input type="text" id="Search19" name="Search19" size="30" placeholder="Twitter Username"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="FollerMe"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch20(Search20) {
+                            window.open('http://google.com/search?q=site%3Atwitter.com%2F' + Search20, 'Search20window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch20(this.Search20.value); return false;">
+                        <input type="text" id="Search20" name="Search20" size="30" placeholder="Twitter Username"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="Google Archives"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch21(Search21) {
+                            window.open('https://www.google.com/search?q=site%3Atwitter.com%2F' + Search21 + '%2Fstatus%2F', 'Search21window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch21(this.Search21.value); return false;">
+                        <input type="text" id="Search21" name="Search21" size="30" placeholder="Twitter Username"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="Google Tweets"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch22(Search22) {
+                            window.open('http://www.bing.com/search?q=twitter.com/' + Search22, 'Search22window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch22(this.Search22.value); return false;">
+                        <input type="text" id="Search22" name="Search22" size="30" placeholder="Twitter Username"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="Bing Archives"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch23(Search23) {
+                            window.open('https://www.yandex.com/search/?text=https%3A%2F%2Ftwitter.com%2F' + Search23, 'Search23window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch23(this.Search23.value); return false;">
+                        <input type="text" id="Search23" name="Search23" size="30" placeholder="Twitter Username"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="Yandex Archives"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch24(Search24) {
+                            window.open('https://webcache.googleusercontent.com/search?q=cache:https://twitter.com/' + Search24, 'Search24window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch24(this.Search24.value); return false;">
+                        <input type="text" id="Search24" name="Search24" size="30" placeholder="Twitter Username"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="Google Cache"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch25(Search25) {
+                            window.open('https://webcache.googleusercontent.com/search?q=cache:https://twitter.com/' + Search25 + '&num=1&hl=en&gl=ca&strip=0&vwsrc=1', 'Search25window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch25(this.Search25.value); return false;">
+                        <input type="text" id="Search25" name="Search25" size="30" placeholder="Twitter Username"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="Google Text"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch26(Search26) {
+                            window.open('http://web.archive.org/web/*/twitter.com/' + Search26, 'Search26window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch26(this.Search26.value); return false;">
+                        <input type="text" id="Search26" name="Search26" size="30" placeholder="Twitter Username"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="Wayback Machine"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch27(Search27) {
+                            window.open('https://api.memory.lol/v1/tw/' + Search27, 'Search27window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch27(this.Search27.value); return false;">
+                        <input type="text" id="Search27" name="Search27" size="30" placeholder="Twitter Username"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="Historical"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch28(Search28) {
+                            window.open('https://api.memory.lol/v1/tw/id/' + Search28, 'Search28window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch28(this.Search28.value); return false;">
+                        <input type="text" name="Search28" size="30" placeholder="Twitter User ID" value=""/>
+                        <input type="submit" style="width:140px" value="Historical"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch29(Search29) {
+                            window.open('https://spoonbill.io/data/' + Search29, 'Search29window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch29(this.Search29.value); return false;">
+                        <input type="text" id="Search29" name="Search29" size="30" placeholder="Twitter Username"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="Spoonbill"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch30(Search30) {
+                            window.open('https://followerwonk.com/analyze/' + Search30, 'Search30window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch30(this.Search30.value); return false;">
+                        <input type="text" id="Search30" name="Search30" size="30" placeholder="Twitter Username"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="Friend Analysis"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch31(Search31) {
+                            window.open('https://followerwonk.com/analyze/' + Search31 + '?op=fl', 'Search31window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch31(this.Search31.value); return false;">
+                        <input type="text" id="Search31" name="Search31" size="30" placeholder="Twitter Username"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="Follower Analysis"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch32(Search32) {
+                            window.open('https://www.twitteraudit.com/' + Search32, 'Search32window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch32(this.Search32.value); return false;">
+                        <input type="text" id="Search32" name="Search32" size="30" placeholder="Twitter Username"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="Twitter Audit"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch33(Search33) {
+                            window.open('https://www.twitonomy.com/profile.php?sn=' + Search33, 'Search33window');
+                        }
+                    </script>
+                    <form onsubmit="doSearch33(this.Search33.value); return false;">
+                        <input type="text" id="Search33" name="Search33" size="30" placeholder="Twitter Username"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="Twitonomy"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch34a(Search34a) {
+                            window.open('https://twitter.com/search?q=' + Search34a + '&f=user', 'Search34awindow');
+                        }
+                    </script>
+                    <form onsubmit="doSearch34a(this.Search34a.value); return false;">
+                        <input type="text" id="Search34a" name="Search34a" size="30" placeholder="Real Name" value=""/>
+                        <input type="submit" style="width:140px" value="Profile Search I"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch35a(Search35a) {
+                            window.open('http://followerwonk.com/bio/?q_type=all&n=' + Search35a, 'Search35awindow');
+                        }
+                    </script>
+                    <form onsubmit="doSearch35a(this.Search35a.value); return false;">
+                        <input type="text" id="Search35a" name="Search35a" size="30" placeholder="Real Name" value=""/>
+                        <input type="submit" style="width:140px" value="Profile Search II"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch36a(Search36a) {
+                            window.open('https://twitter.com/i/lists/' + Search36a, 'Search36awindow');
+                        }
+                    </script>
+                    <form onsubmit="doSearch36a(this.Search36a.value); return false;">
+                        <input type="text" id="Search36a" name="Search36a" size="30" placeholder="List Number"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="List"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch37a(Search37a) {
+                            window.open('https://twitter.com/i/lists/' + Search37a + '/members', 'Search37awindow');
+                        }
+                    </script>
+                    <form onsubmit="doSearch37a(this.Search37a.value); return false;">
+                        <input type="text" id="Search37a" name="Search37a" size="30" placeholder="List Number"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="List Members"/><br></form>
+                    <script type="text/javascript">
+                        function doSearch38a(Search38a) {
+                            window.open('https://twitter.com/i/lists/' + Search38a + '/followers', 'Search38awindow');
+                        }
+                    </script>
+                    <form onsubmit="doSearch38a(this.Search38a.value); return false;">
+                        <input type="text" id="Search38a" name="Search38a" size="30" placeholder="List Number"
+                               value=""/>
+                        <input type="submit" style="width:140px" value="List Followers"/><br></form>
+                    <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
